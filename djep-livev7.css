@@ -17229,3 +17229,47 @@ body.djep-planningformpage-ready .djep-planningform-toggle {
     color: var(--djep-brand, #c1098a) !important;
   }
 }
+/* ============================================================================
+   PAYMENT PAGE: CONTINUE TO CARD DETAILS BUTTON FIX
+   --------------------------------------------------------------------------
+   Keeps the payment submit button from stretching/wrapping inside the side card.
+   This specifically overrides the older rule:
+   body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card .djep-actionbutton { width:100%; }
+   ============================================================================ */
+
+body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card {
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  gap: 14px !important;
+}
+
+body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card .djep-actionbutton,
+body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card input[type="submit"],
+body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card input[type="button"],
+body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card button,
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard .djep-actionbutton,
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard input[type="submit"],
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard input[type="button"],
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard button {
+  width: auto !important;
+  min-width: max-content !important;
+  max-width: 100% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  align-self: flex-start !important;
+  margin-top: 0 !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  line-height: 1.1 !important;
+  flex: 0 0 auto !important;
+}
+
+body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card .djep-actionbutton br,
+body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card button br,
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard .djep-actionbutton br,
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard button br {
+  display: none !important;
+}
