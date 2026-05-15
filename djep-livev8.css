@@ -17229,47 +17229,56 @@ body.djep-planningformpage-ready .djep-planningform-toggle {
     color: var(--djep-brand, #c1098a) !important;
   }
 }
-/* ============================================================================
-   PAYMENT PAGE: CONTINUE TO CARD DETAILS BUTTON FIX
-   --------------------------------------------------------------------------
-   Keeps the payment submit button from stretching/wrapping inside the side card.
-   This specifically overrides the older rule:
-   body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card .djep-actionbutton { width:100%; }
-   ============================================================================ */
+/* ==========================================================================
+   PAYMENT PAGE CONTINUE BUTTON FINAL FIX
+   Keeps "Continue to Card Details" sized like a normal button.
+   ========================================================================== */
 
-body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card {
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-  gap: 14px !important;
-}
-
-body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card .djep-actionbutton,
-body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card input[type="submit"],
-body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card input[type="button"],
-body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card button,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard .djep-actionbutton,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard input[type="submit"],
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard input[type="button"],
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard button {
-  width: auto !important;
-  min-width: max-content !important;
-  max-width: 100% !important;
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button,
+body.djep-paymentpage-ready #page_paypal form#nonce-form.djep-payment-step-entry #submit_payment_button,
+body.djep-paymentpage-ready #page_paypal form.djep-payment-step-entry #submit_payment_button {
   display: inline-flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: flex-start !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 14px 0 0 !important;
+  padding: 0 !important;
   align-self: flex-start !important;
-  margin-top: 0 !important;
-  padding-left: 24px !important;
-  padding-right: 24px !important;
-  white-space: nowrap !important;
-  text-align: center !important;
-  line-height: 1.1 !important;
+  justify-self: flex-start !important;
   flex: 0 0 auto !important;
 }
 
-body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card .djep-actionbutton br,
-body.djep-paymentpage-ready #page_paypal .djep-payment-submit-card button br,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard .djep-actionbutton br,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-sidecard button br {
-  display: none !important;
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button .djep-actionbutton,
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button button,
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button input[type="button"],
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button input[type="submit"],
+body.djep-paymentpage-ready #page_paypal form#nonce-form.djep-payment-step-entry #card-button,
+body.djep-paymentpage-ready #page_paypal form#nonce-form.djep-payment-step-entry #submit_payment_button button,
+body.djep-paymentpage-ready #page_paypal form#nonce-form.djep-payment-step-entry button.djep-actionbutton,
+body.djep-paymentpage-ready #page_paypal form.djep-payment-step-entry #card-button,
+body.djep-paymentpage-ready #page_paypal form.djep-payment-step-entry #submit_payment_button button,
+body.djep-paymentpage-ready #page_paypal form.djep-payment-step-entry button.djep-actionbutton {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: max-content !important;
+  min-height: 42px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 12px 22px !important;
+  white-space: nowrap !important;
+  flex: 0 0 auto !important;
+  align-self: flex-start !important;
+  box-sizing: border-box !important;
+}
+
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-submit-card,
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-entry-sidecard:has(#submit_payment_button),
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-entry-sidecard:has(#card-button) {
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
 }
