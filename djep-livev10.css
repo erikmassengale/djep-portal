@@ -5,7 +5,7 @@
 :root {
   /* ============================================================================
      BRAND COLOR OVERRIDE — change THIS one value to rebrand the whole portal.
-     Default is Abell DJ Company pink (#c1098a).
+     Default is Abell DJ Company pink (#934a5f).
      Every brand-tinted element on the site (buttons, links, focus rings, sidebar
      active states, hover accents, the page-title underline, calendar pills,
      etc.) is derived from this single color via the color-mix() rules below.
@@ -17,18 +17,18 @@
   /* Auto-derived shades. oklch() darkens by reducing lightness while keeping
      the same hue + chroma, so warm brand colors (orange, yellow, red) stay
      warm instead of muddying through brown when faded toward black. */
-  --djep-brand-dark: oklch(from var(--djep-brand) calc(l - 0.18) c h);
-  --djep-brand-soft: color-mix(in srgb, var(--djep-brand) 10%, #fff);
-  --djep-nav-active: var(--djep-brand);
+  --djep-brand-dark: #531839;
+  --djep-brand-soft: #f5ebf6;
+  --djep-nav-active: #531839;
 
   /* Button gradient stops — auto-derived from --djep-brand. If you don't like
      the result on a warm color, override --djep-button-bg-start with any hex
      (e.g. --djep-button-bg-start: #b04400;) to pick the dark side of the
      gradient yourself. The bright side rarely needs changing. */
-  --djep-button-bg-start: oklch(from var(--djep-brand) calc(l - 0.2) c h);
-  --djep-button-bg-end: color-mix(in srgb, var(--djep-brand) 95%, #fff);
-  --djep-button-bg-hover-start: oklch(from var(--djep-brand) calc(l - 0.25) c h);
-  --djep-button-bg-hover-end: color-mix(in srgb, var(--djep-brand) 88%, #fff);
+  --djep-button-bg-start: #531839;
+  --djep-button-bg-end: #934a5f;
+  --djep-button-bg-hover-start: #42122d;
+  --djep-button-bg-hover-end: #934a5f;
 
   --djep-button-bg: linear-gradient(45deg, var(--djep-button-bg-start) 0%, var(--djep-button-bg-end) 76%);
   --djep-button-bg-hover: linear-gradient(45deg, var(--djep-button-bg-hover-start) 0%, var(--djep-button-bg-hover-end) 76%);
@@ -46,16 +46,16 @@
      Non-brand tokens — typography, surfaces, borders, etc. */
   --djep-font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
   --djep-font-heading: "Oswald", "Montserrat", "Segoe UI", Arial, sans-serif;
-  --djep-page-bg: #f3f5f9;
+  --djep-page-bg: #f4f1f6;
   --djep-surface: #ffffff;
-  --djep-surface-muted: #f8f9fc;
-  --djep-surface-strong: #eef1f7;
-  --djep-border: #d8dfeb;
-  --djep-border-strong: #c6cfde;
-  --djep-shadow: 0 14px 34px rgba(17, 26, 46, 0.08);
-  --djep-shadow-soft: 0 8px 20px rgba(17, 26, 46, 0.06);
+  --djep-surface-muted: #fbf7fb;
+  --djep-surface-strong: #f1eaf4;
+  --djep-border: #e3d7e5;
+  --djep-border-strong: #d6abb3;
+  --djep-shadow: 0 14px 34px rgba(83, 24, 57, 0.08);
+  --djep-shadow-soft: 0 8px 20px rgba(83, 24, 57, 0.055);
   --djep-text: #182033;
-  --djep-text-muted: #5f6880;
+  --djep-text-muted: #57648c;
   --djep-heading: #101729;
   --djep-nav-bg: #222a3d;
   --djep-nav-text: #e9edf6;
@@ -63,7 +63,7 @@
   --djep-success: #248a57;
   --djep-warning-bg: #fff4cf;
   --djep-warning-text: #664d03;
-  --djep-danger-soft: #fff0f5;
+  --djep-danger-soft: #f5ebf6;
   --djep-radius-sm: 10px;
   --djep-radius-md: 16px;
   --djep-radius-lg: 22px;
@@ -1163,16 +1163,16 @@ body.djep-homepage-ready .djep-home-event-actions .djep-eventdetailsbutton {
 
 body.djep-homepage-ready .djep-home-event-actions .djep-planeventbutton:hover {
   color: #fff;
-  background-color: #c8218b;
+  background-color: #934a5f;
   background-image: var(--djep-button-bg-hover);
-  border-color: rgba(112, 20, 92, 0.5);
+  border-color: rgba(83, 24, 57, 0.5);
   box-shadow: var(--djep-button-shadow-hover);
   transform: scale(1.03);
 }
 
 body.djep-homepage-ready .djep-home-event-actions .djep-paymentbutton:hover {
   color: #fff;
-  background-color: #c8218b;
+  background-color: #934a5f;
   background-image: var(--djep-button-bg-hover);
   border-color: #ffffff;
   box-shadow: var(--djep-button-shadow-hover);
@@ -1371,16 +1371,16 @@ body.djep-eventspage-ready .djep-events-event-actions .djep-eventdetailsbutton {
 
 body.djep-eventspage-ready .djep-events-event-actions .djep-planeventbutton:hover {
   color: #fff;
-  background-color: #c8218b;
+  background-color: #934a5f;
   background-image: var(--djep-button-bg-hover);
-  border-color: rgba(112, 20, 92, 0.5);
+  border-color: rgba(83, 24, 57, 0.5);
   box-shadow: var(--djep-button-shadow-hover);
   transform: scale(1.03);
 }
 
 body.djep-eventspage-ready .djep-events-event-actions .djep-paymentbutton:hover {
   color: #fff;
-  background-color: #c8218b;
+  background-color: #934a5f;
   background-image: var(--djep-button-bg-hover);
   border-color: #ffffff;
   box-shadow: var(--djep-button-shadow-hover);
@@ -1874,8 +1874,8 @@ body.djep-contactpage-ready .djep-contact-form-control > input:focus,
 body.djep-contactpage-ready .djep-contact-form-control > textarea:focus,
 body.djep-contactpage-ready .djep-contact-form-control > select:focus {
   outline: none;
-  border-color: #cf1c88;
-  box-shadow: 0 0 0 4px rgba(207, 28, 136, 0.12);
+  border-color: #934a5f;
+  box-shadow: 0 0 0 4px rgba(147, 74, 95, 0.12);
   background: #fff;
 }
 
@@ -1958,7 +1958,7 @@ body.djep-contactpage-ready .djep-contact-info-value a {
 }
 
 body.djep-contactpage-ready .djep-contact-info-value a:hover {
-  color: #cf1c88;
+  color: #934a5f;
 }
 
 @media (max-width: 991px) {
@@ -3130,7 +3130,7 @@ form[name="ep_form"][action*="browsemusic.asp"] #add_your_own_song_helper_div in
   padding: 11px 20px !important;
   border-radius: 999px !important;
   border: 1px solid var(--djep-button-border) !important;
-  background-color: #c8218b !important;
+  background-color: #934a5f !important;
   background-image: var(--djep-button-bg) !important;
   font-size: 14px !important;
   font-weight: 700 !important;
@@ -6332,7 +6332,7 @@ body.djep-planningformpage-ready #djep-content > h2.djep-h2 > .djep-planeventbut
 body.djep-planningformpage-ready #djep-content > h2.djep-h2 > .djep-planeventbutton.djep-changebutton:hover {
   color: #fff !important;
   background: var(--djep-button-bg-hover) !important;
-  border-color: rgba(112, 20, 92, 0.5) !important;
+  border-color: rgba(83, 24, 57, 0.5) !important;
   box-shadow: var(--djep-button-shadow-hover) !important;
   transform: scale(1.03) !important;
 }
@@ -6794,7 +6794,7 @@ body.djep-musicpage-ready .djep-music-header-button {
 body.djep-musicpage-ready .djep-music-header-button:hover {
   color: #fff !important;
   background: var(--djep-button-bg-hover) !important;
-  border-color: rgba(112, 20, 92, 0.5) !important;
+  border-color: rgba(83, 24, 57, 0.5) !important;
   box-shadow: var(--djep-button-shadow-hover) !important;
   transform: scale(1.03) !important;
 }
@@ -7038,8 +7038,8 @@ body.djep-guestmusicpage-ready .ui-dialog #guest_name {
 }
 
 body.djep-guestmusicpage-ready .ui-dialog #guest_name:focus {
-  border-color: #cf1c88 !important;
-  box-shadow: 0 0 0 4px rgba(207, 28, 136, 0.12) !important;
+  border-color: #934a5f !important;
+  box-shadow: 0 0 0 4px rgba(147, 74, 95, 0.12) !important;
 }
 
 body.djep-guestmusicpage-ready .ui-dialog input[type="button"],
@@ -10198,7 +10198,7 @@ body.djep-guestrequestspage-ready #djep-content > h2.djep-h2 > a.djep-guestreque
 body.djep-guestrequestspage-ready #djep-content > h2.djep-h2 > a.djep-guestrequests-header-button:hover {
   color: #fff !important;
   background: var(--djep-button-bg-hover) !important;
-  border-color: rgba(112, 20, 92, 0.5) !important;
+  border-color: rgba(83, 24, 57, 0.5) !important;
   box-shadow: var(--djep-button-shadow-hover) !important;
   transform: scale(1.03) !important;
 }
@@ -10535,7 +10535,7 @@ body.djep-songrequestspage-ready #djep-content > h2.djep-h2 > a.djep-songrequest
 body.djep-songrequestspage-ready #djep-content > h2.djep-h2 > a.djep-songrequests-header-button:hover {
   color: #fff !important;
   background: var(--djep-button-bg-hover) !important;
-  border-color: rgba(112, 20, 92, 0.5) !important;
+  border-color: rgba(83, 24, 57, 0.5) !important;
   box-shadow: var(--djep-button-shadow-hover) !important;
   transform: scale(1.03) !important;
 }
@@ -12563,8 +12563,8 @@ body.djep-local-static .djep-timeline-panel > .djep-titlebar label[for="toggleau
   justify-content: center !important;
   white-space: nowrap !important;
   border-radius: 999px !important;
-  border-color: rgba(112, 20, 92, 0.42) !important;
-  background-color: #c8218b !important;
+  border-color: rgba(83, 24, 57, 0.42) !important;
+  background-color: #934a5f !important;
   background-image: var(--djep-button-bg) !important;
   box-shadow: var(--djep-button-shadow) !important;
   font-family: var(--djep-font-family) !important;
@@ -13558,16 +13558,16 @@ body.djep-local-static .djep-timeline-panel > .djep-titlebar label[for="toggleau
 #djep-content > h2.djep-h2:has(+ #page_eventdetails) > a.djep-planeventbutton.djep-changebutton:hover,
 #djep-content > h2.djep-h2.djep-eventdetails-heading > a.djep-planeventbutton.djep-changebutton:hover {
   color: #fff !important;
-  background-color: #c8218b !important;
+  background-color: #934a5f !important;
   background-image: var(--djep-button-bg-hover) !important;
-  border-color: rgba(112, 20, 92, 0.5) !important;
+  border-color: rgba(83, 24, 57, 0.5) !important;
   box-shadow: var(--djep-button-shadow-hover) !important;
   transform: scale(1.03) !important;
 }
 
 #page_eventdetails .djep-paymentbutton:hover {
   color: #fff !important;
-  background-color: #c8218b !important;
+  background-color: #934a5f !important;
   background-image: var(--djep-button-bg-hover) !important;
   border-color: #ffffff !important;
   box-shadow: var(--djep-button-shadow-hover) !important;
@@ -13576,7 +13576,7 @@ body.djep-local-static .djep-timeline-panel > .djep-titlebar label[for="toggleau
 
 #page_eventdetails .djep-card-action .djep-actionbutton:hover {
   color: #fff !important;
-  background-color: #c8218b !important;
+  background-color: #934a5f !important;
   background-image: var(--djep-button-bg-hover) !important;
   border-color: #ffffff !important;
   box-shadow: var(--djep-button-shadow-hover) !important;
@@ -15176,8 +15176,8 @@ body.djep-musicpage-ready .djep-spotify-paste-input {
 
 body.djep-musicpage-ready .djep-spotify-paste-input:focus {
   outline: none;
-  border-color: #cf1c88;
-  box-shadow: 0 0 0 3px rgba(207, 28, 136, 0.16);
+  border-color: #934a5f;
+  box-shadow: 0 0 0 3px rgba(147, 74, 95, 0.16);
 }
 
 body.djep-musicpage-ready .djep-spotify-paste-clear {
@@ -15318,8 +15318,8 @@ body.djep-musicpage-ready select.djep-addown-control {
 }
 body.djep-musicpage-ready .djep-addown-control:focus {
   outline: none !important;
-  border-color: #cf1c88 !important;
-  box-shadow: 0 0 0 3px rgba(207, 28, 136, 0.16) !important;
+  border-color: #934a5f !important;
+  box-shadow: 0 0 0 3px rgba(147, 74, 95, 0.16) !important;
 }
 /* Special Song select kept in the form for backend compatibility but hidden. */
 body.djep-musicpage-ready .djep-addown-hidden-control {
@@ -15339,7 +15339,7 @@ body.djep-musicpage-ready .djep-addown-save {
   padding: 10px 28px !important;
   border-radius: 999px !important;
   border: 0 !important;
-  background: linear-gradient(45deg, #550147 0%, #cf1c88 76%) !important;
+  background: linear-gradient(45deg, #550147 0%, #934a5f 76%) !important;
   color: #ffffff !important;
   font-size: 14px !important;
   font-weight: 700 !important;
@@ -15981,7 +15981,7 @@ body.djep-paymentpage-ready #page_paypal:has(a.djep-paywithbutton) > .col-xs-12:
   height: 3px !important;
   margin-top: 14px !important;
   border-radius: 999px !important;
-  background: linear-gradient(90deg, var(--djep-brand, #c1098a) 0%, var(--djep-brand-soft, #f2d9e9) 100%) !important;
+  background: linear-gradient(90deg, var(--djep-brand, #934a5f) 0%, var(--djep-brand-soft, #f2d9e9) 100%) !important;
 }
 
 /* Card wrapper — spans the full content width, not centered in a narrow
@@ -16047,13 +16047,13 @@ body.djep-paymentpage-ready a.djep-paywithbutton img {
 }
 body.djep-paymentpage-ready a.djep-paywithbutton:hover,
 body.djep-paymentpage-ready a.djep-paywithbutton:focus-visible {
-  border-color: var(--djep-brand, #c1098a) !important;
+  border-color: var(--djep-brand, #934a5f) !important;
   box-shadow: 0 8px 18px rgb(from var(--djep-brand) r g b / 0.12) !important;
   transform: translateY(-1px) !important;
   outline: none;
 }
 body.djep-paymentpage-ready a.djep-paywithbutton:focus-visible {
-  outline: 2px solid var(--djep-brand, #c1098a);
+  outline: 2px solid var(--djep-brand, #934a5f);
   outline-offset: 2px;
 }
 
@@ -16172,7 +16172,7 @@ body #page_paypal form.djep-payment-step-entry .djep-payment-entry-panel .form-g
   padding: 0 !important;
   font-size: 20px !important;
   font-weight: 800 !important;
-  color: var(--djep-brand, #c1098a) !important;
+  color: var(--djep-brand, #934a5f) !important;
 }
 
 /* Amount input: $ prefix + branded input */
@@ -16203,7 +16203,7 @@ body #page_paypal form.djep-payment-step-entry input#paypal_amount {
   outline: none !important;
 }
 body #page_paypal form.djep-payment-step-entry input#paypal_amount:focus {
-  border-color: var(--djep-brand, #c1098a) !important;
+  border-color: var(--djep-brand, #934a5f) !important;
   box-shadow: 0 0 0 3px rgb(from var(--djep-brand) r g b / 0.15) !important;
 }
 
@@ -16230,8 +16230,8 @@ body #page_paypal form.djep-payment-step-entry input.djep-actionbutton {
   font-weight: 700 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
-  background: var(--djep-button-bg, linear-gradient(135deg, #c1098a 0%, #8e0666 100%)) !important;
-  background-image: var(--djep-button-bg, linear-gradient(135deg, #c1098a 0%, #8e0666 100%)) !important;
+  background: var(--djep-button-bg, linear-gradient(135deg, #934a5f 0%, #8e0666 100%)) !important;
+  background-image: var(--djep-button-bg, linear-gradient(135deg, #934a5f 0%, #8e0666 100%)) !important;
   background-color: var(--djep-brand) !important;
   border: 1px solid rgb(from var(--djep-brand-dark) r g b / 0.24) !important;
   border-radius: 14px !important;
@@ -16254,7 +16254,7 @@ body #page_paypal form.djep-payment-step-entry .djep-payment-entry-panel .djep-i
   padding: 14px 16px !important;
   background: #fafbfc !important;
   border: 1px solid #e3e8f1 !important;
-  border-left: 3px solid var(--djep-brand, #c1098a) !important;
+  border-left: 3px solid var(--djep-brand, #934a5f) !important;
   border-radius: 12px !important;
   margin-top: 4px !important;
 }
@@ -16282,7 +16282,7 @@ body #page_paypal form.djep-payment-step-entry a.djep-readviewbutton {
   box-shadow: none !important;
 }
 body #page_paypal form.djep-payment-step-entry a.djep-readviewbutton:hover {
-  color: var(--djep-brand, #c1098a) !important;
+  color: var(--djep-brand, #934a5f) !important;
 }
 
 /* ====================================================================
@@ -16475,7 +16475,7 @@ body #page_paypal form#nonce-form.djep-payment-step-entry #maincarddiv_title .in
 }
 body #page_paypal form#nonce-form.djep-payment-step-entry #maincarddiv_title input[id*="amount" i]:focus,
 body #page_paypal form#nonce-form.djep-payment-step-entry #maincarddiv_title .input-group input:focus {
-  border-color: var(--djep-brand, #c1098a) !important;
+  border-color: var(--djep-brand, #934a5f) !important;
   box-shadow: 0 0 0 3px rgb(from var(--djep-brand) r g b / 0.15) !important;
 }
 
@@ -16582,8 +16582,8 @@ body #page_paypal form#nonce-form.djep-payment-step-entry button.djep-actionbutt
   font-weight: 700 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
-  background: var(--djep-button-bg, linear-gradient(135deg, #c1098a 0%, #8e0666 100%)) !important;
-  background-image: var(--djep-button-bg, linear-gradient(135deg, #c1098a 0%, #8e0666 100%)) !important;
+  background: var(--djep-button-bg, linear-gradient(135deg, #934a5f 0%, #8e0666 100%)) !important;
+  background-image: var(--djep-button-bg, linear-gradient(135deg, #934a5f 0%, #8e0666 100%)) !important;
   background-color: var(--djep-brand) !important;
   border: 1px solid rgb(from var(--djep-brand-dark) r g b / 0.24) !important;
   border-radius: 14px !important;
@@ -16615,7 +16615,7 @@ body.djep-paymentpage-ready #page_paypal .djep-payment-warning-inline {
   color: #667085;
   background: #fafbfc;
   border: 1px solid #e3e8f1;
-  border-left: 3px solid var(--djep-brand, #c1098a);
+  border-left: 3px solid var(--djep-brand, #934a5f);
   border-radius: 12px;
 }
 
@@ -16674,7 +16674,7 @@ body.djep-paymentpage-ready #page_paypal .djep-payment-warning-inline {
   display: block !important;
 }
 .djep-paypage-altgateways > a.djep-paywithbutton:hover {
-  border-color: var(--djep-brand, #c1098a) !important;
+  border-color: var(--djep-brand, #934a5f) !important;
   box-shadow: 0 8px 18px rgb(from var(--djep-brand) r g b / 0.12) !important;
   transform: translateY(-1px) !important;
 }
@@ -16758,7 +16758,7 @@ body.djep-guestmusicpage-ready #add_your_own_song_helper_div textarea {
 }
 body.djep-guestmusicpage-ready #add_your_own_song_helper_div input:not([type=button]):not([type=submit]):not([type=reset]):focus,
 body.djep-guestmusicpage-ready #add_your_own_song_helper_div textarea:focus {
-  border-color: var(--djep-brand, #c1098a) !important;
+  border-color: var(--djep-brand, #934a5f) !important;
   box-shadow: 0 0 0 3px rgb(from var(--djep-brand) r g b / 0.15) !important;
 }
 
@@ -17225,8 +17225,8 @@ body.djep-planningformpage-ready .djep-planningform-toggle {
   body.djep-timelinepage-ready .djep-timeline-mobile-action.is-active,
   body.djep-timelinepage-ready .djep-timeline-mobile-action--notes[aria-pressed="true"] {
     background: rgb(from var(--djep-brand) r g b / 0.12) !important;
-    border-color: var(--djep-brand, #c1098a) !important;
-    color: var(--djep-brand, #c1098a) !important;
+    border-color: var(--djep-brand, #934a5f) !important;
+    color: var(--djep-brand, #934a5f) !important;
   }
 }
 
