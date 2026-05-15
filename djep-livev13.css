@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+@import url("https://fonts.cdnfonts.com/css/proxima-nova");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap");
 
 :root {
@@ -12,7 +13,7 @@
      If you want fine-grained control, you can override the individual
      --djep-brand-dark / --djep-brand-soft / --djep-button-bg* variables too.
      ============================================================================ */
-  --djep-brand: #934a5f;
+  --djep-brand: #57648c;
 
   /* Auto-derived shades. oklch() darkens by reducing lightness while keeping
      the same hue + chroma, so warm brand colors (orange, yellow, red) stay
@@ -30,8 +31,8 @@
   --djep-button-bg-hover-start: oklch(from var(--djep-brand) calc(l - 0.25) c h);
   --djep-button-bg-hover-end: color-mix(in srgb, var(--djep-brand) 88%, #fff);
 
-  --djep-button-bg: linear-gradient(180deg, #6f789f 0%, #57648c 100%);
-  --djep-button-bg-hover: linear-gradient(180deg, #63709a 0%, #4d597d 100%);
+  --djep-button-bg: linear-gradient(180deg, #65729a 0%, #57648c 100%);
+  --djep-button-bg-hover: linear-gradient(180deg, #5f6c95 0%, #4e5a80 100%);
   --djep-button-shadow: 0 8px 18px -10px color-mix(in srgb, var(--djep-brand-dark) 80%, #000 20%);
   --djep-button-shadow-hover: 0 12px 24px -12px color-mix(in srgb, var(--djep-brand-dark) 80%, #000 20%);
 
@@ -359,23 +360,6 @@ input[type="radio"] {
   box-shadow: 0 18px 40px rgba(17, 26, 46, 0.08);
   backdrop-filter: blur(8px);
 }
-
-body.djep-homepage-ready .djep-home-event-shell,
-body.djep-eventspage-ready .djep-events-event-card > .djep-events-event-shell,
-body.djep-contactpage-ready .djep-contact-panel,
-body.djep-profilepage-ready .djep-profile-panel,
-body.djep-documentpage-ready .djep-document-panel,
-body.djep-paymentpage-ready .djep-makepaymentbox,
-body.djep-planpage-ready .djep-plan-panel,
-body.djep-planningformpage-ready .djep-planningform-panel,
-body.djep-timelinepage-ready .djep-timeline-panel {
-  background: linear-gradient(
-    180deg,
-    rgba(245,235,246,0.78) 0%,
-    rgba(255,255,255,0.98) 100%
-  ) !important;
-}
-
 
 #djep-content > * {
   min-width: 0;
@@ -1078,7 +1062,7 @@ body.djep-homepage-ready .djep-home-event-card > .djep-home-event-shell {
   padding: 22px 24px;
   border: 1px solid rgba(216, 223, 235, 0.88);
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.78) 0%, rgba(255,255,255,0.98) 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
   box-shadow: 0 8px 20px rgba(17, 26, 46, 0.035);
 }
 
@@ -1272,8 +1256,8 @@ body.djep-eventspage-ready .djep-events-section {
   padding: 24px 26px;
   border: 1px solid #dbe3ef;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.72) 0%, rgba(255,255,255,0.97) 100%);
-  box-shadow: 0 18px 36px rgba(83,24,57,0.08);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 36px rgba(18, 28, 45, 0.05);
 }
 
 body.djep-eventspage-ready .djep-events-section + .djep-events-section {
@@ -1315,7 +1299,7 @@ body.djep-eventspage-ready .djep-events-event-card > .djep-events-event-shell {
   padding: 22px 24px;
   border: 1px solid rgba(216, 223, 235, 0.88);
   border-radius: 24px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.78) 0%, rgba(255,255,255,0.98) 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
   box-shadow: 0 8px 20px rgba(17, 26, 46, 0.035);
 }
 
@@ -1422,7 +1406,7 @@ body.djep-eventspage-ready .djep-events-empty-state {
   padding: 18px 20px;
   border: 1px dashed rgba(198, 207, 222, 0.96);
   border-radius: 20px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.55) 0%, #ffffff 100%);
+  background: #fbfcfe;
   color: #667085;
   font-size: 14px;
   font-weight: 500;
@@ -1813,8 +1797,8 @@ body.djep-contactpage-ready .djep-contact-panel {
   padding: 24px 26px;
   border: 1px solid #dbe3ef;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.72) 0%, rgba(255,255,255,0.97) 100%);
-  box-shadow: 0 18px 36px rgba(83,24,57,0.08);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 36px rgba(18, 28, 45, 0.05);
 }
 
 body.djep-contactpage-ready .djep-contact-panel > .djep-titlebarsmall {
@@ -1875,7 +1859,7 @@ body.djep-contactpage-ready .djep-contact-form-control > select {
   padding: 12px 14px;
   border: 1px solid #d5deea;
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.55) 0%, #ffffff 100%);
+  background: #fbfcfe;
   color: #1f2937;
   font-size: 15px;
   box-sizing: border-box;
@@ -1891,7 +1875,7 @@ body.djep-contactpage-ready .djep-contact-form-control > input:focus,
 body.djep-contactpage-ready .djep-contact-form-control > textarea:focus,
 body.djep-contactpage-ready .djep-contact-form-control > select:focus {
   outline: none;
-  border-color: #934a5f;
+  border-color: #cf1c88;
   box-shadow: 0 0 0 4px rgba(207, 28, 136, 0.12);
   background: #fff;
 }
@@ -1975,7 +1959,7 @@ body.djep-contactpage-ready .djep-contact-info-value a {
 }
 
 body.djep-contactpage-ready .djep-contact-info-value a:hover {
-  color: #934a5f;
+  color: #cf1c88;
 }
 
 @media (max-width: 991px) {
@@ -6062,7 +6046,7 @@ body.djep-planpage-ready .djep-plan-access-note {
   padding: 14px 18px;
   border: 1px solid rgba(224, 230, 239, 0.92);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.72) 0%, rgba(255,255,255,0.97) 100%);
+  background: rgba(255, 255, 255, 0.96);
 }
 
 body.djep-planpage-ready .djep-plan-access-icon {
@@ -6137,7 +6121,7 @@ body.djep-planpage-ready .djep-plan-panel-timeline table tr {
   padding: 16px 18px;
   border: 1px solid rgba(224, 230, 239, 0.96);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.55) 0%, #ffffff 100%);
+  background: #fbfcfe;
   box-shadow: none;
 }
 
@@ -6148,7 +6132,7 @@ body.djep-planpage-ready .djep-plan-panel-timeline table tr::after {
 
 body.djep-planpage-ready .djep-plan-panel-forms table tr:hover,
 body.djep-planpage-ready .djep-plan-panel-timeline table tr:hover {
-  background: linear-gradient(180deg, rgba(245,235,246,0.55) 0%, #ffffff 100%);
+  background: #fbfcfe;
   border-color: rgba(224, 230, 239, 0.96);
   box-shadow: none;
   transform: none;
@@ -6246,7 +6230,7 @@ body.djep-planpage-ready .djep-plan-panel-music .djep-plan-tool {
   padding: 16px 18px;
   border: 1px solid rgba(224, 230, 239, 0.96);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.55) 0%, #ffffff 100%);
+  background: #fbfcfe;
   box-shadow: none;
   text-decoration: none !important;
 }
@@ -8269,7 +8253,7 @@ body.djep-musicpage-ready .djep-music-limit-chip {
 
 body.djep-musicpage-ready .djep-music-limit-chip-empty {
   color: #98a2b3;
-  background: linear-gradient(180deg, rgba(245,235,246,0.55) 0%, #ffffff 100%);
+  background: #fbfcfe;
 }
 
 body.djep-musicpage-ready .djep-music-playlist-divider {
@@ -10375,7 +10359,7 @@ body.djep-guestrequestspage-ready .djep-guestrequests-toggle {
   padding: 12px 14px;
   border: 1px solid #e2e8f0;
   border-radius: 16px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.55) 0%, #ffffff 100%);
+  background: #fbfcfe;
   cursor: pointer;
 }
 
@@ -10451,7 +10435,7 @@ body.djep-guestrequestspage-ready .djep-guestrequests-item {
   padding: 16px 18px;
   border: 1px solid #e2e8f0;
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.55) 0%, #ffffff 100%);
+  background: #fbfcfe;
 }
 
 body.djep-guestrequestspage-ready .djep-guestrequests-item-title,
@@ -10640,7 +10624,7 @@ body.djep-songrequestspage-ready .djep-songrequest-item {
   padding: 14px 16px;
   border: 1px solid rgba(224, 230, 239, 0.96);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(245,235,246,0.55) 0%, #ffffff 100%);
+  background: #fbfcfe;
 }
 
 body.djep-songrequestspage-ready .djep-songrequest-item-copy {
@@ -12397,7 +12381,7 @@ body.djep-local-static .djep-timeline-panel > .djep-titlebar label[for="toggleau
     padding: 14px;
     border: 1px solid rgba(216, 223, 235, 0.92);
     border-radius: 18px;
-    background: linear-gradient(180deg, rgba(245,235,246,0.78) 0%, rgba(255,255,255,0.98) 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
     box-shadow: 0 8px 18px rgba(17, 26, 46, 0.05);
   }
 
@@ -15193,7 +15177,7 @@ body.djep-musicpage-ready .djep-spotify-paste-input {
 
 body.djep-musicpage-ready .djep-spotify-paste-input:focus {
   outline: none;
-  border-color: #934a5f;
+  border-color: #cf1c88;
   box-shadow: 0 0 0 3px rgba(207, 28, 136, 0.16);
 }
 
@@ -17246,109 +17230,56 @@ body.djep-planningformpage-ready .djep-planningform-toggle {
     color: var(--djep-brand, #c1098a) !important;
   }
 }
-
 /* ==========================================================================
-   DOW OAK PAYMENT PAGE FINAL BUTTON FIX
-   --------------------------------------------------------------------------
-   This targets the actual Continue To Card Details submit area on the payment
-   entry page and makes it match the width of the amount/total fields above it.
+   PAYMENT PAGE CONTINUE BUTTON FINAL FIX
+   Keeps "Continue to Card Details" sized like a normal button.
    ========================================================================== */
 
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-entry-grid {
-  grid-template-columns: minmax(0, 1fr) !important;
-}
-
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-entry-sidecard,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-submit-card,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-submit-row,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button_row {
-  display: block !important;
-  width: 100% !important;
-  max-width: none !important;
-  min-width: 0 !important;
-  margin-top: 18px !important;
-  align-self: stretch !important;
-}
-
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-entry-sidecard *,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-submit-card *,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-submit-row *,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button_row * {
-  max-width: none !important;
-}
-
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-actionbutton,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel input[type="submit"],
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel input[type="button"],
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel button[type="submit"],
 body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #show_paypal_buttons,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel input[value*="Continue"],
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel input[value*="CONTINUE"],
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel button {
-  width: 100% !important;
-  max-width: 100% !important;
+body.djep-paymentpage-ready #page_paypal form#nonce-form.djep-payment-step-entry #submit_payment_button,
+body.djep-paymentpage-ready #page_paypal form.djep-payment-step-entry #submit_payment_button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: auto !important;
   min-width: 0 !important;
-  min-height: 52px !important;
-  display: flex !important;
+  max-width: none !important;
+  margin: 14px 0 0 !important;
+  padding: 0 !important;
+  align-self: flex-start !important;
+  justify-self: flex-start !important;
+  flex: 0 0 auto !important;
+}
+
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button .djep-actionbutton,
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button button,
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button input[type="button"],
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel #submit_payment_button input[type="submit"],
+body.djep-paymentpage-ready #page_paypal form#nonce-form.djep-payment-step-entry #card-button,
+body.djep-paymentpage-ready #page_paypal form#nonce-form.djep-payment-step-entry #submit_payment_button button,
+body.djep-paymentpage-ready #page_paypal form#nonce-form.djep-payment-step-entry button.djep-actionbutton,
+body.djep-paymentpage-ready #page_paypal form.djep-payment-step-entry #card-button,
+body.djep-paymentpage-ready #page_paypal form.djep-payment-step-entry #submit_payment_button button,
+body.djep-paymentpage-ready #page_paypal form.djep-payment-step-entry button.djep-actionbutton {
+  display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: max-content !important;
+  min-height: 42px !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 12px 22px !important;
   white-space: nowrap !important;
-  text-align: center !important;
-  padding: 0 24px !important;
-  border-radius: 14px !important;
+  flex: 0 0 auto !important;
+  align-self: flex-start !important;
   box-sizing: border-box !important;
 }
 
-body.djep-paymentpage-ready #page_paypal .djep-payment-workspace,
-body.djep-paymentpage-ready #page_paypal .djep-payment-column,
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel {
-  align-items: stretch !important;
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-submit-card,
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-entry-sidecard:has(#submit_payment_button),
+body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel .djep-payment-entry-sidecard:has(#card-button) {
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
 }
-
-body.djep-paymentpage-ready #page_paypal .djep-payment-entry-panel {
-  height: auto !important;
-  min-height: 0 !important;
-}
-
-/* ==========================================================================
-   DOW OAK FINAL BUTTON + FONT POLISH
-   Conservative branding-only pass. No layout or structure changes.
-   ========================================================================== */
-
-body,
-#djep-content,
-#djep-content p,
-#djep-content span,
-#djep-content label,
-#djep-content input,
-#djep-content select,
-#djep-content textarea,
-#djep-content button {
-  font-family: "Proxima Nova", "Montserrat", "Segoe UI", Arial, sans-serif;
-}
-
-.djep-actionbutton,
-.djep-widgetaction,
-.djep-planeventbutton,
-.djep-paymentbutton,
-.djep-eventdetailsbutton,
-input[type="submit"],
-input[type="button"],
-button {
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-  font-weight: 800 !important;
-  background-image: var(--djep-button-bg) !important;
-}
-
-.djep-actionbutton:hover,
-.djep-widgetaction:hover,
-.djep-planeventbutton:hover,
-.djep-paymentbutton:hover,
-input[type="submit"]:hover,
-input[type="button"]:hover,
-button:hover {
-  background-image: var(--djep-button-bg-hover) !important;
-}
-
